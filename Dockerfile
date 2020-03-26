@@ -12,7 +12,7 @@ ARG KEYBOARD
 
 ENV KEYBOARD=$KEYBOARD
 
-ADD ${KEYBOARD}/keymap.c /root/qmk_firmware/keyboards/${KEYBOARD}/keymaps/docker/keymap.c
+ADD ${KEYBOARD}/keymap.json /root/qmk_firmware/keyboards/${KEYBOARD}/keymaps/docker/keymap.json
 
 RUN qmk compile -kb ${KEYBOARD} -km docker
 
